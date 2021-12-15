@@ -5,9 +5,18 @@ import pdfkit
 import csv
 
 
-class Generator:
+class Converter:
+    """
+    Converter class to convert a list of dictionary objects to various formats
+    """
     @staticmethod
-    def generate_pdf(list_of_dicts, path):
+    def convert_to_pdf(list_of_dicts, path):
+        """
+        Converts list of dictionary objects to pdf
+
+        :param list_of_dicts: list containing dictionary objects
+        :param path: output path of the generated pdf
+        """
         df = pd.DataFrame(data=list_of_dicts)
         tmp_html_filename = 'tmp.html'
         df.to_html(tmp_html_filename)
@@ -18,22 +27,46 @@ class Generator:
         os.remove(tmp_html_filename)
 
     @staticmethod
-    def generate_xml(list_of_dicts, path):
+    def convert_to_xml(list_of_dicts, path):
+        """
+        Converts list of dictionary objects to xml
+
+        :param list_of_dicts: list containing dictionary objects
+        :param path: output path of the generated xml
+        """
         df = pd.DataFrame(data=list_of_dicts)
         df.to_xml(path)
 
     @staticmethod
-    def generate_html(list_of_dicts, path):
+    def convert_to_html(list_of_dicts, path):
+        """
+        Converts list of dictionary objects to html
+
+        :param list_of_dicts: list containing dictionary objects
+        :param path: output path of the generated html
+        """
         df = pd.DataFrame(data=list_of_dicts)
         df.to_html(path)
 
     @staticmethod
-    def generate_excel(list_of_dicts, path):
+    def convert_to_excel(list_of_dicts, path):
+        """
+        Converts list of dictionary objects to excel
+
+        :param list_of_dicts: list containing dictionary objects
+        :param path: output path of the generated excel
+        """
         df = pd.DataFrame(data=list_of_dicts)
         df.to_excel(path)
 
     @staticmethod
-    def generate_csv(list_of_dicts, field_names, path):
+    def convert_to_csv(list_of_dicts, field_names, path):
+        """
+        Converts list of dictionary objects to csv
+
+        :param list_of_dicts: list containing dictionary objects
+        :param path: output path of the generated csv
+        """
         with open(path, 'w') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=field_names)
             writer.writeheader()

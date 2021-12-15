@@ -1,7 +1,7 @@
 import logging
 import os
 from museumapi import MuseumAPI
-from utils import Generator, flatten
+from utils import Converter, flatten
 
 logging.basicConfig(filename='main.log', filemode='w', format='%(asctime)s : %(levelname)s : %(message)s',
                     level=logging.DEBUG)
@@ -24,11 +24,11 @@ if __name__ == '__main__':
         os.mkdir('reports')
 
     try:
-        Generator.generate_csv(object_list, field_names, os.path.join(report_dir, 'museum_data.csv'))
-        Generator.generate_excel(object_list, os.path.join(report_dir, 'museum_data.xlsx'))
-        Generator.generate_html(object_list, os.path.join(report_dir, 'museum_data.html'))
-        Generator.generate_xml(object_list, os.path.join(report_dir, 'museum_data.xml'))
-        Generator.generate_pdf(object_list, os.path.join(report_dir, 'museum_data.pdf'))
+        Converter.convert_to_csv(object_list, field_names, os.path.join(report_dir, 'museum_data.csv'))
+        Converter.convert_to_excel(object_list, os.path.join(report_dir, 'museum_data.xlsx'))
+        Converter.convert_to_html(object_list, os.path.join(report_dir, 'museum_data.html'))
+        Converter.convert_to_xml(object_list, os.path.join(report_dir, 'museum_data.xml'))
+        Converter.convert_to_pdf(object_list, os.path.join(report_dir, 'museum_data.pdf'))
 
     except FileNotFoundError as e:
         logging.error(str(e))
