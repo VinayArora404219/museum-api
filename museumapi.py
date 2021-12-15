@@ -20,6 +20,7 @@ class MuseumAPI:
         :param headers: headers to be sent in request
         :return:
         """
+        response = None
         url = self.base_url + endpoint
         if headers is None:
             headers = self.headers
@@ -43,17 +44,6 @@ class MuseumAPI:
         }
         """
         endpoint = 'objects'
-        return self.fetch_response(endpoint).json()
-
-    def get_all_departments(self):
-        """
-
-        :return: {
-            total: int,
-            objectIds: list
-        }
-        """
-        endpoint = 'departments'
         return self.fetch_response(endpoint).json()
 
     def get_object_for_id(self, object_id):

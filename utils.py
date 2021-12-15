@@ -11,7 +11,10 @@ class Generator:
         df = pd.DataFrame(data=list_of_dicts)
         tmp_html_filename = 'tmp.html'
         df.to_html(tmp_html_filename)
-        pdfkit.from_file(tmp_html_filename, output_path=path)
+        pdfkit.from_file(tmp_html_filename, output_path=path, options={
+            'page-height': '1500',
+            'page-width': '660',
+        })
         os.remove(tmp_html_filename)
 
     @staticmethod
