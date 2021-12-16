@@ -3,6 +3,7 @@ import os
 import pandas as pd
 import pdfkit
 import csv
+import logging
 
 
 class Converter:
@@ -65,6 +66,7 @@ class Converter:
         Converts list of dictionary objects to csv
 
         :param list_of_dicts: list containing dictionary objects
+        :param field_names: list of names of the fields
         :param path: output path of the generated csv
         """
         with open(path, 'w') as csvfile:
@@ -75,32 +77,64 @@ class Converter:
                 writer.writerow(d)
 
 
-def flatten(obj):
+def flatten(obj, keys):
     """
     flattens the dictionary object specified in the argument
 
     :param obj: object to be flattened
-    :return: reference of flattened objects
+    :param keys: list of keys which are not flattened by default
+    :return: reference of flattened object
     """
-    constituents = obj['constituents']
-    if constituents:
-        for constituent in constituents:
-            for key, value in constituent.items():
-                obj[key] = value
-        del obj['constituents']
-
-    measurements = obj['measurements']
-    if measurements:
-        for measurement in measurements:
-            for key, value in measurement.items():
-                obj[key] = value
-
-        del obj['measurements']
-
-    tags = obj['tags']
-    if tags:
-        for tag in tags:
-            for key, value in tag.items():
-                obj[key] = value
-        del obj['tags']
+    for key in keys:
+        values = obj[key]
+        if values:
+            for value in values:
+                for k, v in value.items():
+                    obj[k] = v
+            del obj[key]
+    # constituents = obj['constituents']
+    # if constituents:
+    #     for constituent in constituents:
+    #         for key, value in constituent.items():
+    #             obj[key] = value
+    #     del obj['constituents']
+    #
+    # measurements = obj['measurements']
+    # if measurements:
+    #     for measurement in measurements:
+    #         for key, value in measurement.items():
+    #             obj[key] = value
+    #
+    #     del obj['measurements']
+    #
+    # tags = obj['tags']
+    # if tags:
+    #     for tag in tags:
+    #         for key, value in tag.items():
+    #             obj[key] = value
+    #     del obj['tags']
     return obj
+
+
+def setup_logger(module_name,
+                 log_file,
+                 log_format=logging.Formatter('%(asctime)s %(levelname)s %(message)s'),
+                 level=logging.INFO):
+    """
+    for setting up multiple loggers easily
+
+    :param module_name: name of the module to generate logs for
+    :param log_file: path of the file to generate the logs
+    :param log_format: format of the log
+    :param level: log level
+    :return:
+    """
+
+    handler = logging.FileHandler(log_file)
+    handler.setFormatter(log_format)
+
+    logger = logging.getLogger(module_name)
+    logger.setLevel(level)
+    logger.addHandler(handler)
+
+    return logger
