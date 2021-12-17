@@ -4,8 +4,8 @@ import sys
 
 import requests
 
-from museumapi import MuseumAPI
-from utils import Converter, flatten, setup_logger
+from museum_api_package.museumapi import MuseumAPI
+from museum_api_package.utils import Converter, flatten, setup_logger
 
 # setting base directory as current directory.
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
