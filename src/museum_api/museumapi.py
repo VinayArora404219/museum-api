@@ -2,12 +2,8 @@ import requests
 
 
 class MuseumAPI:
-    def __init__(self, headers=None):
-        """
-        :param headers: dictionary containing headers
-        """
-        self.headers = headers
-        self.base_url = 'https://collectionapi.metmuseum.org/public/collection/v1/'
+    def __init__(self):
+        self.base_url = 'https://collectionapi.metmuseum.org'
 
     def __fetch_response(self, endpoint, headers=None):
         """
@@ -19,33 +15,43 @@ class MuseumAPI:
 
         try:
             response = requests.get(url, headers=headers)
-        except (requests.ConnectionError, requests.Timeout, requests.ConnectTimeout) as e:
-            raise e
-        except requests.HTTPError as httpError:
-            raise httpError
+        except (requests.ConnectionError, requests.Timeout, requests.ConnectTimeout) as conn_error:
+            raise conn_error
+        except requests.HTTPError as http_error:
+            raise http_error
 
         return response
 
-    def get_all_object_ids(self):
+    def get_all_object_ids(self, headers=None):
         """
         fetches all the object ids from the museum api.
 
+        :param headers: headers to be sent in request
         :return: a dictionary with following keys -:
         * total: int
             count of number of objects fetched from museum api
         * objectIds: list
             list of all the object ids fetched from in museum
         """
-        endpoint = 'objects'
-        return self.__fetch_response(endpoint).json()
+        endpoint = '/public/collection/v1/objects'
+        response = self.__fetch_response(endpoint, headers)
+        if response.ok:
+            return response.json()
 
-    def get_object_for_id(self, object_id):
+        return None
+
+    def get_object_for_id(self, object_id, headers=None):
         """
         fetches an object with specified object_id from museum api.
 
         :param object_id: object_id of the object to fetch data from museum api
+        :param headers: headers to be sent in request
         :return: dictionary containing object detail with the following keys
         """
 
-        endpoint = "objects/" + str(object_id)
-        return self.__fetch_response(endpoint).json()
+        endpoint = f'/public/collection/v1/objects/{str(object_id)}'
+        response = self.__fetch_response(endpoint, headers)
+        if response.ok:
+            return response.json()
+
+        return None

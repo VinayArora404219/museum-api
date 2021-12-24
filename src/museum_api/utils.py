@@ -69,12 +69,14 @@ class Converter:
         :param field_names: list of names of the fields
         :param path: output path of the generated csv
         """
-        with open(path, 'w') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=field_names)
-            writer.writeheader()
-            for obj in list_of_dicts:
-                d = {key: value for key, value in obj.items() if key in field_names}
-                writer.writerow(d)
+        df = pd.DataFrame(data=list_of_dicts)
+        df.to_csv(path)
+        # with open(path, 'w') as csvfile:
+        #     writer = csv.DictWriter(csvfile, fieldnames=field_names)
+        #     writer.writeheader()
+        #     for obj in list_of_dicts:
+        #         d = {key: value for key, value in obj.items() if key in field_names}
+        #         writer.writerow(d)
 
 
 def flatten(obj, keys):
