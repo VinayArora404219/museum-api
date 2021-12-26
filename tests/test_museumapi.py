@@ -76,21 +76,6 @@ class TestMuseumAPI(unittest.TestCase):
     #     # the same data structure.
     #     self.assertListEqual(list(actual_keys), list(mocked_keys))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @patch('museum_api.museumapi.requests.get')
     def test_getting_object_ids_when_response_is_ok(self, mock_get):
         actual_object_ids_data = None
@@ -133,11 +118,15 @@ class TestMuseumAPI(unittest.TestCase):
     @patch('museum_api.museumapi.requests.get')
     def test_getting_object_when_response_is_ok(self, mock_get):
         mocked_object_data = None
+        tmp_object_data = None
         # getting mocked data from the file
         try:
             with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'correct_data/object_resp.json'),
                       'r') as data:
-                mocked_object_data = json.load(data)
+                actual_object_data = json.load(data)
+
+            with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'correct_data/object_ids_resp.json'), 'r') as data:
+                tmp_object_data = json.load(data)
 
         except FileNotFoundError as e:
             logging.error(f'File not found : {e.args[-1]}')
@@ -146,10 +135,10 @@ class TestMuseumAPI(unittest.TestCase):
         # Configure the mock to return a response with an OK status code. Also, the mock should have
         # a `json()` method that returns a dictionary object.
         mock_get.return_value = Mock(ok=True)
-        mock_get.return_value.json.return_value = mocked_object_data
+        mock_get.return_value.json.return_value = tmp_object_data
 
         # Call the service, which will send a request to the server.
-        actual_object_data = self.mAPIObj.get_object_for_id(1)
+        mocked_object_data = self.mAPIObj.get_object_for_id(1)
 
         # If the request is sent successfully, then I expect a response to be returned.
         self.assertDictEqual(mocked_object_data, actual_object_data)

@@ -2,6 +2,10 @@ import requests
 
 
 class MuseumAPI:
+    """
+        MuseumAPI class allows you to easily get the objects from museum API through
+        objects without knowing much details of the endpoints.
+    """
     def __init__(self):
         self.base_url = 'https://collectionapi.metmuseum.org'
 
@@ -46,7 +50,7 @@ class MuseumAPI:
 
         :param object_id: object_id of the object to fetch data from museum api
         :param headers: headers to be sent in request
-        :return: dictionary containing object detail with the following keys
+        :return: dictionary containing detail of the object.
         """
 
         endpoint = f'/public/collection/v1/objects/{str(object_id)}'

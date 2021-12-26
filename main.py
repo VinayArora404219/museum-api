@@ -4,6 +4,7 @@
 import logging
 import os
 import sys
+import requests
 
 from museum_api.museumapi import MuseumAPI
 from museum_api.utils import Converter, flatten, setup_logger
@@ -19,19 +20,29 @@ if __name__ == '__main__':
 
     object_list = None
     for i in range(3):
-        # getting all the objects ids from the museum api.
-        object_ids = m.get_all_object_ids()['objectIDs'][0: 15]
+        try:
+            # getting all the objects ids from the museum api.
+            object_ids = m.get_all_object_ids()['objectIDs'][0: 15]
 
-        keys = ('constituents', 'measurements', 'tags')
-        # getting list of detail of each object corresponding to their object ids.
-        object_list = list(
-            map(lambda object_id: flatten(m.get_object_for_id(object_id), keys), object_ids)
-        )
+            keys = ('constituents', 'measurements', 'tags')
+            # getting list of detail of each object corresponding to their object ids.
+            object_list = list(
+                map(lambda object_id: flatten(m.get_object_for_id(object_id), keys), object_ids)
+            )
 
-        break
+            break
 
-    # extracting list of field names from object_list.
-    field_names = object_list[0].keys()
+        except (requests.ConnectionError, requests.ConnectTimeout, requests.Timeout) as connError:
+            error_logger.error("Connection error, Retrying (%i/3)" % (i + 1))
+            if i == 3:
+                error_logger.error(
+                    "Maximum retires reached. Either server is not responding, or client is not connected to internet"
+                )
+                sys.exit(1)
+
+        except Exception as e:
+            error_logger.error(str(e))
+            sys.exit(1)
 
     # directory in which reports will be generated.
     report_dir = os.path.join(BASE_DIR, 'reports/')
@@ -44,7 +55,7 @@ if __name__ == '__main__':
 
     try:
         Converter.convert_to_csv(
-            object_list, field_names,
+            object_list,
             os.path.join(report_dir, 'museum_data.csv')
         )
         Converter.convert_to_excel(object_list, os.path.join(report_dir, 'museum_data.xlsx'))

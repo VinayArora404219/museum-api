@@ -36,7 +36,7 @@ class Converter:
         :param path: output path of the generated xml
         """
         df = pd.DataFrame(data=list_of_dicts)
-        df.to_xml(path)
+        df.to_xml(path, index=False)
 
     @staticmethod
     def convert_to_html(list_of_dicts, path):
@@ -47,7 +47,7 @@ class Converter:
         :param path: output path of the generated html
         """
         df = pd.DataFrame(data=list_of_dicts)
-        df.to_html(path)
+        df.to_html(path, index=False)
 
     @staticmethod
     def convert_to_excel(list_of_dicts, path):
@@ -58,10 +58,10 @@ class Converter:
         :param path: output path of the generated excel
         """
         df = pd.DataFrame(data=list_of_dicts)
-        df.to_excel(path)
+        df.to_excel(path, index=False)
 
     @staticmethod
-    def convert_to_csv(list_of_dicts, field_names, path):
+    def convert_to_csv(list_of_dicts, path):
         """
         Converts list of dictionary objects to csv
 
@@ -70,7 +70,7 @@ class Converter:
         :param path: output path of the generated csv
         """
         df = pd.DataFrame(data=list_of_dicts)
-        df.to_csv(path)
+        df.to_csv(path, index=False)
         # with open(path, 'w') as csvfile:
         #     writer = csv.DictWriter(csvfile, fieldnames=field_names)
         #     writer.writeheader()

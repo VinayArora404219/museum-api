@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <data>
   <row>
-    <index>0</index>
     <objectID>1</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>1979.486.1</accessionNumber>
@@ -21,7 +20,7 @@
     <artistRole>Maker</artistRole>
     <artistPrefix/>
     <artistDisplayName>James Barton Longacre</artistDisplayName>
-    <artistDisplayBio>American, Delaware County, Pennsylvania 1794–1869 Philadelphia, Pennsylvania</artistDisplayBio>
+    <artistDisplayBio>American, Delaware County, Pennsylvania 1794\u20131869 Philadelphia, Pennsylvania</artistDisplayBio>
     <artistSuffix/>
     <artistAlphaSort>Longacre, James Barton</artistAlphaSort>
     <artistNationality>American</artistNationality>
@@ -73,7 +72,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>1</index>
     <objectID>2</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>1980.264.5</accessionNumber>
@@ -93,7 +91,7 @@
     <artistRole>Maker</artistRole>
     <artistPrefix/>
     <artistDisplayName>Christian Gobrecht</artistDisplayName>
-    <artistDisplayBio>1785–1844</artistDisplayBio>
+    <artistDisplayBio>1785\u20131844</artistDisplayBio>
     <artistSuffix/>
     <artistAlphaSort>Gobrecht, Christian</artistAlphaSort>
     <artistNationality/>
@@ -145,7 +143,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>2</index>
     <objectID>3</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>67.265.9</accessionNumber>
@@ -174,7 +171,7 @@
     <artistGender/>
     <artistWikidata_URL/>
     <artistULAN_URL/>
-    <objectDate>1909–27</objectDate>
+    <objectDate>1909\u201327</objectDate>
     <objectBeginDate>1909</objectBeginDate>
     <objectEndDate>1927</objectEndDate>
     <medium>Gold</medium>
@@ -217,7 +214,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>3</index>
     <objectID>4</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>67.265.10</accessionNumber>
@@ -246,7 +242,7 @@
     <artistGender/>
     <artistWikidata_URL/>
     <artistULAN_URL/>
-    <objectDate>1909–27</objectDate>
+    <objectDate>1909\u201327</objectDate>
     <objectBeginDate>1909</objectBeginDate>
     <objectEndDate>1927</objectEndDate>
     <medium>Gold</medium>
@@ -289,7 +285,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>4</index>
     <objectID>5</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>67.265.11</accessionNumber>
@@ -318,7 +313,7 @@
     <artistGender/>
     <artistWikidata_URL/>
     <artistULAN_URL/>
-    <objectDate>1909–27</objectDate>
+    <objectDate>1909\u201327</objectDate>
     <objectBeginDate>1909</objectBeginDate>
     <objectEndDate>1927</objectEndDate>
     <medium>Gold</medium>
@@ -361,7 +356,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>5</index>
     <objectID>6</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>67.265.12</accessionNumber>
@@ -390,7 +384,7 @@
     <artistGender/>
     <artistWikidata_URL/>
     <artistULAN_URL/>
-    <objectDate>1909–27</objectDate>
+    <objectDate>1909\u201327</objectDate>
     <objectBeginDate>1909</objectBeginDate>
     <objectEndDate>1927</objectEndDate>
     <medium>Gold</medium>
@@ -433,7 +427,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>6</index>
     <objectID>7</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>67.265.13</accessionNumber>
@@ -462,7 +455,7 @@
     <artistGender/>
     <artistWikidata_URL/>
     <artistULAN_URL/>
-    <objectDate>1909–27</objectDate>
+    <objectDate>1909\u201327</objectDate>
     <objectBeginDate>1909</objectBeginDate>
     <objectEndDate>1927</objectEndDate>
     <medium>Gold</medium>
@@ -505,7 +498,6 @@
     <Wikidata_URL>https://www.wikidata.org/wiki/Q41207</Wikidata_URL>
   </row>
   <row>
-    <index>7</index>
     <objectID>8</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>67.265.14</accessionNumber>
@@ -534,7 +526,7 @@
     <artistGender/>
     <artistWikidata_URL/>
     <artistULAN_URL/>
-    <objectDate>1909–27</objectDate>
+    <objectDate>1909\u201327</objectDate>
     <objectBeginDate>1909</objectBeginDate>
     <objectEndDate>1927</objectEndDate>
     <medium>Gold</medium>
@@ -577,7 +569,6 @@
     <Wikidata_URL>https://www.wikidata.org/wiki/Q2092297</Wikidata_URL>
   </row>
   <row>
-    <index>8</index>
     <objectID>9</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>67.265.15</accessionNumber>
@@ -606,7 +597,7 @@
     <artistGender/>
     <artistWikidata_URL/>
     <artistULAN_URL/>
-    <objectDate>1909–27</objectDate>
+    <objectDate>1909\u201327</objectDate>
     <objectBeginDate>1909</objectBeginDate>
     <objectEndDate>1927</objectEndDate>
     <medium>Gold</medium>
@@ -649,7 +640,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>9</index>
     <objectID>10</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>1979.486.3</accessionNumber>
@@ -669,7 +659,7 @@
     <artistRole>Maker</artistRole>
     <artistPrefix/>
     <artistDisplayName>Bela Lyon Pratt</artistDisplayName>
-    <artistDisplayBio>1867–1917</artistDisplayBio>
+    <artistDisplayBio>1867\u20131917</artistDisplayBio>
     <artistSuffix/>
     <artistAlphaSort>Pratt, Bela Lyon</artistAlphaSort>
     <artistNationality/>
@@ -721,7 +711,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>10</index>
     <objectID>11</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>1979.486.2</accessionNumber>
@@ -741,7 +730,7 @@
     <artistRole>Maker</artistRole>
     <artistPrefix/>
     <artistDisplayName>Christian Gobrecht</artistDisplayName>
-    <artistDisplayBio>1785–1844</artistDisplayBio>
+    <artistDisplayBio>1785\u20131844</artistDisplayBio>
     <artistSuffix/>
     <artistAlphaSort>Gobrecht, Christian</artistAlphaSort>
     <artistNationality/>
@@ -793,7 +782,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>11</index>
     <objectID>12</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>1979.486.7</accessionNumber>
@@ -813,7 +801,7 @@
     <artistRole>Maker</artistRole>
     <artistPrefix/>
     <artistDisplayName>James Barton Longacre</artistDisplayName>
-    <artistDisplayBio>American, Delaware County, Pennsylvania 1794–1869 Philadelphia, Pennsylvania</artistDisplayBio>
+    <artistDisplayBio>American, Delaware County, Pennsylvania 1794\u20131869 Philadelphia, Pennsylvania</artistDisplayBio>
     <artistSuffix/>
     <artistAlphaSort>Longacre, James Barton</artistAlphaSort>
     <artistNationality>American</artistNationality>
@@ -865,7 +853,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>12</index>
     <objectID>13</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>1979.486.4</accessionNumber>
@@ -885,7 +872,7 @@
     <artistRole>Maker</artistRole>
     <artistPrefix/>
     <artistDisplayName>Bela Lyon Pratt</artistDisplayName>
-    <artistDisplayBio>1867–1917</artistDisplayBio>
+    <artistDisplayBio>1867\u20131917</artistDisplayBio>
     <artistSuffix/>
     <artistAlphaSort>Pratt, Bela Lyon</artistAlphaSort>
     <artistNationality/>
@@ -937,7 +924,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>13</index>
     <objectID>14</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>1979.486.5</accessionNumber>
@@ -957,7 +943,7 @@
     <artistRole>Maker</artistRole>
     <artistPrefix/>
     <artistDisplayName>Christian Gobrecht</artistDisplayName>
-    <artistDisplayBio>1785–1844</artistDisplayBio>
+    <artistDisplayBio>1785\u20131844</artistDisplayBio>
     <artistSuffix/>
     <artistAlphaSort>Gobrecht, Christian</artistAlphaSort>
     <artistNationality/>
@@ -1009,7 +995,6 @@
     <Wikidata_URL/>
   </row>
   <row>
-    <index>14</index>
     <objectID>15</objectID>
     <isHighlight>False</isHighlight>
     <accessionNumber>16.74.49</accessionNumber>
@@ -1038,7 +1023,7 @@
     <artistGender/>
     <artistWikidata_URL/>
     <artistULAN_URL/>
-    <objectDate>1665–1700</objectDate>
+    <objectDate>1665\u20131700</objectDate>
     <objectBeginDate>1665</objectBeginDate>
     <objectEndDate>1700</objectEndDate>
     <medium>Silver</medium>
