@@ -33,14 +33,15 @@ if __name__ == '__main__':
             break
 
         except (requests.ConnectionError, requests.ConnectTimeout, requests.Timeout) as connError:
-            error_logger.error("Connection error, Retrying (%i/3)" % (i + 1))
+            error_logger.error(f'Connection error, Retrying ({(i + 1)/3})')
             if i == 3:
                 error_logger.error(
-                    "Maximum retires reached. Either server is not responding, or client is not connected to internet"
+                    "Maximum retires reached. Either server is not responding,"
+                    " or client is not connected to internet"
                 )
                 sys.exit(1)
 
-        except Exception as e:
+        except FileNotFoundError as e:
             error_logger.error(str(e))
             sys.exit(1)
 
@@ -63,6 +64,6 @@ if __name__ == '__main__':
         Converter.convert_to_xml(object_list, os.path.join(report_dir, 'museum_data.xml'))
         Converter.convert_to_pdf(object_list, os.path.join(report_dir, 'museum_data.pdf'))
 
-    except Exception as e:
+    except FileNotFoundError as e:
         error_logger.error('Error occurred :%s' % ({str(e)}))
         sys.exit(1)
