@@ -5,7 +5,7 @@ without needing you to send requests to its api endpoints using requests module.
 
 To install the package, execute 
 ```commandline
-pip3 install -i https://test.pypi.org/simple/ museum-api-package==0.0.7
+pip3 install -i https://test.pypi.org/simple/ museum-api-package==0.0.8
 ```
 
 

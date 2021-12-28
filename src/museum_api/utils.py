@@ -1,15 +1,15 @@
+import logging
 import os
 
 import pandas as pd
 import pdfkit
-import csv
-import logging
 
 
 class Converter:
     """
     Converter class to convert a list of dictionary objects to various formats
     """
+
     @staticmethod
     def convert_to_pdf(list_of_dicts, path):
         """
@@ -18,12 +18,21 @@ class Converter:
         :param list_of_dicts: list containing dictionary objects
         :param path: output path of the generated pdf
         """
+        if list_of_dicts is None:
+            raise TypeError("list_of_dicts cannot be None")
+
+        if not isinstance(list_of_dicts, list) or not isinstance(list_of_dicts[0], dict):
+            raise TypeError("list_of_dicts must be a list of dictionaries")
+
+        if path is None:
+            raise TypeError("path cannot be None")
+
         df = pd.DataFrame(data=list_of_dicts)
         tmp_html_filename = 'tmp.html'
         df.to_html(tmp_html_filename)
         pdfkit.from_file(tmp_html_filename, output_path=path, options={
-            'page-height': '1500',
-            'page-width': '660',
+            'page-height': '2500',
+            'page-width': '1270',
         })
         os.remove(tmp_html_filename)
 
@@ -35,6 +44,15 @@ class Converter:
         :param list_of_dicts: list containing dictionary objects
         :param path: output path of the generated xml
         """
+        if list_of_dicts is None:
+            raise TypeError("list_of_dicts cannot be None")
+
+        if not isinstance(list_of_dicts, list) or not isinstance(list_of_dicts[0], dict):
+            raise TypeError("list_of_dicts must be a list of dictionaries")
+
+        if path is None:
+            raise TypeError("path cannot be None")
+
         df = pd.DataFrame(data=list_of_dicts)
         df.to_xml(path, index=False)
 
@@ -46,6 +64,15 @@ class Converter:
         :param list_of_dicts: list containing dictionary objects
         :param path: output path of the generated html
         """
+        if list_of_dicts is None:
+            raise TypeError("list_of_dicts cannot be None")
+
+        if not isinstance(list_of_dicts, list) or not isinstance(list_of_dicts[0], dict):
+            raise TypeError("list_of_dicts must be a list of dictionaries")
+
+        if path is None:
+            raise TypeError("path cannot be None")
+
         df = pd.DataFrame(data=list_of_dicts)
         df.to_html(path, index=False)
 
@@ -57,6 +84,15 @@ class Converter:
         :param list_of_dicts: list containing dictionary objects
         :param path: output path of the generated excel
         """
+        if list_of_dicts is None:
+            raise TypeError("list_of_dicts cannot be None")
+
+        if not isinstance(list_of_dicts, list) or not isinstance(list_of_dicts[0], dict):
+            raise TypeError("list_of_dicts must be a list of dictionaries")
+
+        if path is None:
+            raise TypeError("path cannot be None")
+
         df = pd.DataFrame(data=list_of_dicts)
         df.to_excel(path, index=False)
 
@@ -69,6 +105,15 @@ class Converter:
         :param field_names: list of names of the fields
         :param path: output path of the generated csv
         """
+        if list_of_dicts is None:
+            raise TypeError("list_of_dicts cannot be None")
+
+        if not isinstance(list_of_dicts, list) or not isinstance(list_of_dicts[0], dict):
+            raise TypeError("list_of_dicts must be a list of dictionaries")
+
+        if path is None:
+            raise TypeError("path cannot be None")
+
         df = pd.DataFrame(data=list_of_dicts)
         df.to_csv(path, index=False)
         # with open(path, 'w') as csvfile:
