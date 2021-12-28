@@ -27,6 +27,9 @@ class Converter:
         if path is None:
             raise TypeError("path cannot be None")
 
+        if not os.path.exists(path):
+            raise FileNotFoundError(f'File {path} not found')
+
         df = pd.DataFrame(data=list_of_dicts)
         tmp_html_filename = 'tmp.html'
         df.to_html(tmp_html_filename)

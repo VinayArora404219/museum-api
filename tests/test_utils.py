@@ -48,12 +48,14 @@ class TestConverter(unittest.TestCase):
         new_csv_file_name = 'museum_data.csv'
         new_csv_file_path = os.path.join(self.tmpdir, new_csv_file_name)
         list_of_dicts = None
-        self.assertRaises(TypeError, Converter.convert_to_csv(list_of_dicts, new_csv_file_path))
+        with self.assertRaises(TypeError):
+            Converter.convert_to_csv(list_of_dicts, new_csv_file_path)
 
     def test_convert_to_csv_when_path_is_invalid(self):
         new_csv_file_name = 'museum_data.csv'
-        new_csv_file_path = os.path.join(self.tmpdir, new_csv_file_name)
-        self.assertRaises(TypeError, Converter.convert_to_csv(self.data, new_csv_file_path))
+        new_csv_file_path = os.path.join('abc', new_csv_file_name)
+        with self.assertRaises(FileNotFoundError):
+            Converter.convert_to_csv(self.data, new_csv_file_path)
 
     def test_convert_to_html(self):
         new_html_file_name = 'museum_data.html'
@@ -74,12 +76,14 @@ class TestConverter(unittest.TestCase):
         new_html_file_name = 'museum_data.html'
         new_html_file_path = os.path.join(self.tmpdir, new_html_file_name)
         list_of_dicts = None
-        self.assertRaises(TypeError, Converter.convert_to_html(list_of_dicts, new_html_file_path))
+        with self.assertRaises(TypeError):
+            Converter.convert_to_html(list_of_dicts, new_html_file_path)
 
     def test_convert_to_html_when_path_is_invalid(self):
         new_html_file_name = 'museum_data.html'
-        new_html_file_path = os.path.join(self.tmpdir, new_html_file_name)
-        self.assertRaises(TypeError, Converter.convert_to_html(self.data, new_html_file_path))
+        new_html_file_path = os.path.join('abc', new_html_file_name)
+        with self.assertRaises(FileNotFoundError):
+            Converter.convert_to_html(self.data, new_html_file_path)
 
     def test_convert_to_xml(self):
         new_xml_file_name = 'museum_data.xml'
@@ -100,12 +104,14 @@ class TestConverter(unittest.TestCase):
         new_xml_file_name = 'museum_data.xml'
         new_xml_file_path = os.path.join(self.tmpdir, new_xml_file_name)
         list_of_dicts = None
-        self.assertRaises(TypeError, Converter.convert_to_xml(list_of_dicts, new_xml_file_path))
+        with self.assertRaises(TypeError):
+            Converter.convert_to_xml(list_of_dicts, new_xml_file_path)
 
     def test_convert_to_xml_when_path_is_invalid(self):
         new_xml_file_name = 'museum_data.xml'
-        new_xml_file_path = os.path.join(self.tmpdir, new_xml_file_name)
-        self.assertRaises(TypeError, Converter.convert_to_xml(self.data, new_xml_file_path))
+        new_xml_file_path = os.path.join('abc', new_xml_file_name)
+        with self.assertRaises(FileNotFoundError):
+            Converter.convert_to_xml(self.data, new_xml_file_path)
 
     def test_convert_to_excel(self):
         new_xlsx_file_name = 'museum_data.xlsx'
@@ -133,12 +139,14 @@ class TestConverter(unittest.TestCase):
         new_excel_file_name = 'museum_data.xlsx'
         new_excel_file_path = os.path.join(self.tmpdir, new_excel_file_name)
         list_of_dicts = None
-        self.assertRaises(TypeError, Converter.convert_to_excel(list_of_dicts, new_excel_file_path))
+        with self.assertRaises(TypeError):
+            Converter.convert_to_excel(list_of_dicts, new_excel_file_path)
 
     def test_convert_to_excel_when_path_is_invalid(self):
         new_excel_file_name = 'museum_data.xlsx'
-        new_excel_file_path = os.path.join(self.tmpdir, new_excel_file_name)
-        self.assertRaises(TypeError, Converter.convert_to_excel(self.data, new_excel_file_path))
+        new_excel_file_path = os.path.join('abc', new_excel_file_name)
+        with self.assertRaises(FileNotFoundError):
+            Converter.convert_to_excel(self.data, new_excel_file_path)
 
     def test_convert_to_pdf(self):
         new_pdf_file_name = 'museum_data.pdf'
@@ -159,12 +167,14 @@ class TestConverter(unittest.TestCase):
         new_pdf_file_name = 'museum_data.pdf'
         new_pdf_file_path = os.path.join(self.tmpdir, new_pdf_file_name)
         list_of_dicts = None
-        self.assertRaises(TypeError, Converter.convert_to_pdf(list_of_dicts, new_pdf_file_path))
+        with self.assertRaises(TypeError):
+            Converter.convert_to_pdf(list_of_dicts, new_pdf_file_path)
 
     def test_convert_to_pdf_when_path_is_invalid(self):
         new_pdf_file_name = 'museum_data.pdf'
-        new_pdf_file_path = os.path.join(self.tmpdir, new_pdf_file_name)
-        self.assertRaises(TypeError, Converter.convert_to_pdf(self.data, new_pdf_file_path))
+        new_pdf_file_path = os.path.join('abc', new_pdf_file_name)
+        with self.assertRaises(FileNotFoundError):
+            Converter.convert_to_pdf(self.data, new_pdf_file_path)
 
 
 if __name__ == '__main__':
