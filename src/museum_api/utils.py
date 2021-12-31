@@ -1,3 +1,8 @@
+"""
+    utils module provides various utility methods to transform data from one
+    form to another.
+"""
+
 import logging
 import os
 
@@ -30,9 +35,9 @@ class Converter:
         if not os.path.exists(path):
             raise FileNotFoundError(f'File {path} not found')
 
-        df = pd.DataFrame(data=list_of_dicts)
+        dataframe = pd.DataFrame(data=list_of_dicts)
         tmp_html_filename = 'tmp.html'
-        df.to_html(tmp_html_filename)
+        dataframe.to_html(tmp_html_filename)
         pdfkit.from_file(tmp_html_filename, output_path=path, options={
             'page-height': '2500',
             'page-width': '1270',
@@ -56,8 +61,8 @@ class Converter:
         if path is None:
             raise TypeError("path cannot be None")
 
-        df = pd.DataFrame(data=list_of_dicts)
-        df.to_xml(path, index=False)
+        dataframe = pd.DataFrame(data=list_of_dicts)
+        dataframe.to_xml(path, index=False)
 
     @staticmethod
     def convert_to_html(list_of_dicts, path):
@@ -76,8 +81,8 @@ class Converter:
         if path is None:
             raise TypeError("path cannot be None")
 
-        df = pd.DataFrame(data=list_of_dicts)
-        df.to_html(path, index=False)
+        dataframe = pd.DataFrame(data=list_of_dicts)
+        dataframe.to_html(path, index=False)
 
     @staticmethod
     def convert_to_excel(list_of_dicts, path):
@@ -96,8 +101,8 @@ class Converter:
         if path is None:
             raise TypeError("path cannot be None")
 
-        df = pd.DataFrame(data=list_of_dicts)
-        df.to_excel(path, index=False)
+        dataframe = pd.DataFrame(data=list_of_dicts)
+        dataframe.to_excel(path, index=False)
 
     @staticmethod
     def convert_to_csv(list_of_dicts, path):
@@ -117,8 +122,8 @@ class Converter:
         if path is None:
             raise TypeError("path cannot be None")
 
-        df = pd.DataFrame(data=list_of_dicts)
-        df.to_csv(path, index=False)
+        dataframe = pd.DataFrame(data=list_of_dicts)
+        dataframe.to_csv(path, index=False)
         # with open(path, 'w') as csvfile:
         #     writer = csv.DictWriter(csvfile, fieldnames=field_names)
         #     writer.writeheader()
@@ -139,30 +144,9 @@ def flatten(obj, keys):
         values = obj[key]
         if values:
             for value in values:
-                for k, v in value.items():
-                    obj[k] = v
+                for k, sub_value in value.items():
+                    obj[k] = sub_value
             del obj[key]
-    # constituents = obj['constituents']
-    # if constituents:
-    #     for constituent in constituents:
-    #         for key, value in constituent.items():
-    #             obj[key] = value
-    #     del obj['constituents']
-    #
-    # measurements = obj['measurements']
-    # if measurements:
-    #     for measurement in measurements:
-    #         for key, value in measurement.items():
-    #             obj[key] = value
-    #
-    #     del obj['measurements']
-    #
-    # tags = obj['tags']
-    # if tags:
-    #     for tag in tags:
-    #         for key, value in tag.items():
-    #             obj[key] = value
-    #     del obj['tags']
     return obj
 
 

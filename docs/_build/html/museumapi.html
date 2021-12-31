@@ -71,19 +71,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-museumapi">
-<span id="museumapi-module"></span><h1>museumapi module<a class="headerlink" href="#module-museumapi" title="Permalink to this headline"></a></h1>
+  <section id="module-src.museum_api.museumapi">
+<span id="museumapi-module"></span><h1>museumapi module<a class="headerlink" href="#module-src.museum_api.museumapi" title="Permalink to this headline"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="museumapi.MuseumAPI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">museumapi.</span></span><span class="sig-name descname"><span class="pre">MuseumAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#museumapi.MuseumAPI" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.museumapi.MuseumAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.museum_api.museumapi.</span></span><span class="sig-name descname"><span class="pre">MuseumAPI</span></span><a class="headerlink" href="#src.museum_api.museumapi.MuseumAPI" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>MuseumAPI class allows you to easily get the objects from museum API through
+objects without knowing much details of the endpoints.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="museumapi.MuseumAPI.get_all_object_ids">
-<span class="sig-name descname"><span class="pre">get_all_object_ids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#museumapi.MuseumAPI.get_all_object_ids" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.museumapi.MuseumAPI.get_all_object_ids">
+<span class="sig-name descname"><span class="pre">get_all_object_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.museum_api.museumapi.MuseumAPI.get_all_object_ids" title="Permalink to this definition"></a></dt>
 <dd><p>fetches all the object ids from the museum api.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>a dictionary with following keys -:</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>headers</strong> – headers to be sent in request</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a dictionary with following keys -:</p>
 </dd>
 </dl>
 <ul class="simple">
@@ -101,15 +106,18 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="museumapi.MuseumAPI.get_object_for_id">
-<span class="sig-name descname"><span class="pre">get_object_for_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#museumapi.MuseumAPI.get_object_for_id" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.museumapi.MuseumAPI.get_object_for_id">
+<span class="sig-name descname"><span class="pre">get_object_for_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.museum_api.museumapi.MuseumAPI.get_object_for_id" title="Permalink to this definition"></a></dt>
 <dd><p>fetches an object with specified object_id from museum api.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>object_id</strong> – object_id of the object to fetch data from museum api</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object_id</strong> – object_id of the object to fetch data from museum api</p></li>
+<li><p><strong>headers</strong> – headers to be sent in request</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>dictionary containing object detail with the following keys</p>
+<dd class="field-even"><p>dictionary containing detail of the object.</p>
 </dd>
 </dl>
 </dd></dl>

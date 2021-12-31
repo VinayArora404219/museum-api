@@ -6,3 +6,4 @@ MuseumAPI
 
    museumapi
    utils
+   tests

@@ -1,7 +1,7 @@
 utils module
 ============
 
-.. automodule:: utils
+.. automodule:: src.museum_api.utils
     :members:
     :undoc-members:
     :show-inheritance:

@@ -11,6 +11,7 @@ Welcome to Museum API's documentation!
    :caption: Contents:
 
    modules
+   tests.rst
 
 
 

@@ -1,3 +1,7 @@
+"""
+    This module provides MuseumAPI class, which allows the user to fetch the data from
+    Museum api through methods. The user doesn't need to know the urls of Museum API.
+"""
 import requests
 
 

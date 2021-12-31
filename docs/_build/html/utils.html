@@ -70,16 +70,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-utils">
-<span id="utils-module"></span><h1>utils module<a class="headerlink" href="#module-utils" title="Permalink to this headline"></a></h1>
+  <section id="module-src.museum_api.utils">
+<span id="utils-module"></span><h1>utils module<a class="headerlink" href="#module-src.museum_api.utils" title="Permalink to this headline"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="utils.Converter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">Converter</span></span><a class="headerlink" href="#utils.Converter" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.utils.Converter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.museum_api.utils.</span></span><span class="sig-name descname"><span class="pre">Converter</span></span><a class="headerlink" href="#src.museum_api.utils.Converter" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Converter class to convert a list of dictionary objects to various formats</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="utils.Converter.convert_to_csv">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.Converter.convert_to_csv" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.utils.Converter.convert_to_csv">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.museum_api.utils.Converter.convert_to_csv" title="Permalink to this definition"></a></dt>
 <dd><p>Converts list of dictionary objects to csv</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -93,8 +93,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="utils.Converter.convert_to_excel">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.Converter.convert_to_excel" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.utils.Converter.convert_to_excel">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.museum_api.utils.Converter.convert_to_excel" title="Permalink to this definition"></a></dt>
 <dd><p>Converts list of dictionary objects to excel</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -107,8 +107,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="utils.Converter.convert_to_html">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.Converter.convert_to_html" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.utils.Converter.convert_to_html">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.museum_api.utils.Converter.convert_to_html" title="Permalink to this definition"></a></dt>
 <dd><p>Converts list of dictionary objects to html</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -121,8 +121,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="utils.Converter.convert_to_pdf">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.Converter.convert_to_pdf" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.utils.Converter.convert_to_pdf">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.museum_api.utils.Converter.convert_to_pdf" title="Permalink to this definition"></a></dt>
 <dd><p>Converts list of dictionary objects to pdf</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -135,8 +135,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="utils.Converter.convert_to_xml">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.Converter.convert_to_xml" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.utils.Converter.convert_to_xml">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_to_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.museum_api.utils.Converter.convert_to_xml" title="Permalink to this definition"></a></dt>
 <dd><p>Converts list of dictionary objects to xml</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -151,8 +151,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="utils.flatten">
-<span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.flatten" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.utils.flatten">
+<span class="sig-prename descclassname"><span class="pre">src.museum_api.utils.</span></span><span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.museum_api.utils.flatten" title="Permalink to this definition"></a></dt>
 <dd><p>flattens the dictionary object specified in the argument</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -168,8 +168,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="utils.setup_logger">
-<span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">setup_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_format=&lt;logging.Formatter</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level=20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.setup_logger" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="src.museum_api.utils.setup_logger">
+<span class="sig-prename descclassname"><span class="pre">src.museum_api.utils.</span></span><span class="sig-name descname"><span class="pre">setup_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_format=&lt;logging.Formatter</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level=20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.museum_api.utils.setup_logger" title="Permalink to this definition"></a></dt>
 <dd><p>for setting up multiple loggers easily</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
