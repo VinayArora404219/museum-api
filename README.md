@@ -3,19 +3,20 @@
 Museum API allows you to easily get objects from the museum api through python objects
 without needing you to send requests to its api endpoints using requests module.
 
+# **Installation**
 **To install the package, execute** 
 ```commandline
 pip3 install -i https://test.pypi.org/simple/ museum-api-package==0.0.9
 ```
 
-**Usage**
+# **Usage**
 
 ```
 from museum_api import MuseumAPI
 m = MuseumAPI()
 ```
 
-**Usage examples:**
+## **Usage examples:**
 
 To fetch all the object ids of all the objects available on Museum API:
 ```
