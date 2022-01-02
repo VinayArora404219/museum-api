@@ -10,6 +10,9 @@ import mimetypes
 import os
 from museum_api.utils import setup_logger
 import shutil
+from dotenv import load_dotenv
+
+load_dotenv()
 
 error_logger = setup_logger('mail', 'logs/mail_error.log', level=logging.ERROR)
 
