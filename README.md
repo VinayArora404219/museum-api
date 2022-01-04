@@ -139,6 +139,19 @@ object_data will be set to:
 }
 ```
 
+To generate a pdf, csv, html, excel, xml file, use the functions of Converter class:
+
+```
+    Converter.convert_to_csv(
+            object_list,
+            os.path.join(report_dir, 'museum_data.csv')
+        )
+        Converter.convert_to_excel(object_list, os.path.join(report_dir, 'museum_data.xlsx'))
+        Converter.convert_to_html(object_list, os.path.join(report_dir, 'museum_data.html'))
+        Converter.convert_to_xml(object_list, os.path.join(report_dir, 'museum_data.xml'))
+        Converter.convert_to_pdf(object_list, os.path.join(report_dir, 'museum_data.pdf'))
+```
+
 
 # **Test**
 
